@@ -285,10 +285,10 @@ func (m *Manager) GenerateAccessToken(ctx context.Context, gt oauth2.GrantType, 
 	}
 	if cliPass, ok := cli.(oauth2.ClientPasswordVerifier); ok {
 		if !cliPass.VerifyPassword(tgr.ClientSecret) {
-			return nil, errors.ErrInvalidClient
+			return nil, errors.ErrInvalidClient1
 		}
 	} else if len(cli.GetSecret()) > 0 && tgr.ClientSecret != cli.GetSecret() {
-		return nil, errors.ErrInvalidClient
+		return nil, errors.ErrInvalidClient2
 	}
 	if tgr.RedirectURI != "" {
 		if err := m.validateURI(cli.GetDomain(), tgr.RedirectURI); err != nil {
@@ -297,7 +297,7 @@ func (m *Manager) GenerateAccessToken(ctx context.Context, gt oauth2.GrantType, 
 	}
 
 	if gt == oauth2.ClientCredentials && cli.IsPublic() == true {
-		return nil, errors.ErrInvalidClient
+		return nil, errors.ErrInvalidClient3
 	}
 
 	if gt == oauth2.AuthorizationCode {

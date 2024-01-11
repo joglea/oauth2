@@ -42,6 +42,12 @@ var (
 	ErrServerError                    = errors.New("server_error")
 	ErrTemporarilyUnavailable         = errors.New("temporarily_unavailable")
 	ErrInvalidClient                  = errors.New("invalid_client")
+	ErrInvalidClient1                 = errors.New("invalid_client1")
+	ErrInvalidClient2                 = errors.New("invalid_client2")
+	ErrInvalidClient3                 = errors.New("invalid_client3")
+	ErrInvalidClient4                 = errors.New("invalid_client4")
+	ErrInvalidClient5                 = errors.New("invalid_client5")
+	ErrInvalidClient6                 = errors.New("invalid_client6")
 	ErrInvalidGrant                   = errors.New("invalid_grant")
 	ErrUnsupportedGrantType           = errors.New("unsupported_grant_type")
 	ErrCodeChallengeRquired           = errors.New("invalid_request")
@@ -59,6 +65,12 @@ var Descriptions = map[error]string{
 	ErrServerError:                    "The authorization server encountered an unexpected condition that prevented it from fulfilling the request",
 	ErrTemporarilyUnavailable:         "The authorization server is currently unable to handle the request due to a temporary overloading or maintenance of the server",
 	ErrInvalidClient:                  "Client authentication failed",
+	ErrInvalidClient1:                 "Client authentication failed1",
+	ErrInvalidClient2:                 "Client authentication failed2",
+	ErrInvalidClient3:                 "Client authentication failed3",
+	ErrInvalidClient4:                 "Client authentication failed4",
+	ErrInvalidClient5:                 "Client authentication failed5",
+	ErrInvalidClient6:                 "Client authentication failed6",
 	ErrInvalidGrant:                   "The provided authorization grant (e.g., authorization code, resource owner credentials) or refresh token is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client",
 	ErrUnsupportedGrantType:           "The authorization grant type is not supported by the authorization server",
 	ErrCodeChallengeRquired:           "PKCE is required. code_challenge is missing",
@@ -76,6 +88,12 @@ var StatusCodes = map[error]int{
 	ErrServerError:                    500,
 	ErrTemporarilyUnavailable:         503,
 	ErrInvalidClient:                  401,
+	ErrInvalidClient1:                 401,
+	ErrInvalidClient2:                 401,
+	ErrInvalidClient3:                 401,
+	ErrInvalidClient4:                 401,
+	ErrInvalidClient5:                 401,
+	ErrInvalidClient6:                 401,
 	ErrInvalidGrant:                   401,
 	ErrUnsupportedGrantType:           401,
 	ErrCodeChallengeRquired:           400,
